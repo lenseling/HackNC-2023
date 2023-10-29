@@ -3,9 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://cxny3g4dvr17h" path="res://scenes/plantShelf.tscn" id="1_qvtw1"]
 [ext_resource type="PackedScene" uid="uid://6k30tnb7putq" path="res://scenes/shop.tscn" id="2_o3ba3"]
 [ext_resource type="PackedScene" uid="uid://qkbkmj8ny1nd" path="res://scenes/wateringCan.tscn" id="4_l4ggy"]
-[ext_resource type="PackedScene" uid="uid://bmodcvr0tiy7a" path="res://scenes/growing_zone.tscn" id="5_87wal"]
+[ext_resource type="PackedScene" path="res://scenes/growing_zone.tscn" id="5_87wal"]
 [ext_resource type="Texture2D" uid="uid://bvjyayn77e830" path="res://assets/tools/pesticide.png" id="5_xmknb"]
-[ext_resource type="PackedScene" uid="uid://didq8obcioeta" path="res://scenes/pumpkin_seeds.tscn" id="6_dfqtw"]
+[ext_resource type="PackedScene" path="res://scenes/pumpkin_seeds.tscn" id="6_dfqtw"]
 
 [node name="main" type="Node2D"]
 

@@ -33,7 +33,7 @@ theme_override_fonts/font = ExtResource("3_eis7v")
 theme_override_font_sizes/font_size = 35
 text = "Return to Menu"
 
-[node name="Label" type="Label" parent="."]
+[node name="Stats" type="Label" parent="."]
 offset_left = 48.0
 offset_top = 56.0
 offset_right = 288.0
