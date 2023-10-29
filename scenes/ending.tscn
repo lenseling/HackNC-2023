@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/ending.gd" id="1_5xe7l"]
 [ext_resource type="Texture2D" uid="uid://2qvoqbfg1igj" path="res://assets/[4] Green/[1] Normal.png" id="2_2n330"]
 [ext_resource type="FontFile" uid="uid://eou77t2to7h" path="res://assets/Early GameBoy.ttf" id="3_eis7v"]
-[ext_resource type="AudioStream" uid="uid://d3jbrmvnuqjw1" path="res://scenes/plantslikemusic.mp3" id="4_jflwq"]
+[ext_resource type="AudioStream" uid="uid://d3jbrmvnuqjw1" path="res://assets/plantslikemusic.mp3" id="4_jflwq"]
 
 [node name="ending" type="Node2D"]
 script = ExtResource("1_5xe7l")
@@ -54,7 +54,7 @@ color = Color(0.356863, 0.588235, 0.776471, 1)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_jflwq")
-volume_db = -28.665
+volume_db = -27.728
 autoplay = true
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

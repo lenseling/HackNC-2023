@@ -7,6 +7,12 @@ var plant_grown = false
 func _physics_process(delta):
 	if !plantgrowing:
 		plant = Global.plantSelected
+		if Global.plantSelected == 1: 
+			Global.num_pumpkin += 1
+		elif Global.plantSelected == 2: 
+			Global.num_strawberry += 1
+		elif Global.plantSelected == 3: 
+			Global.num_lettuce += 1
 
 func _on_Area2D_area_entered(area):
 	if !plantgrowing:

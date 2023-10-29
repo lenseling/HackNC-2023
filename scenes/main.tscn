@@ -6,9 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://bmodcvr0tiy7a" path="res://scenes/growing_zone.tscn" id="5_87wal"]
 [ext_resource type="Texture2D" uid="uid://bvjyayn77e830" path="res://assets/tools/pesticide.png" id="5_xmknb"]
 [ext_resource type="PackedScene" uid="uid://didq8obcioeta" path="res://scenes/pumpkin_seeds.tscn" id="6_dfqtw"]
-[ext_resource type="AudioStream" uid="uid://d3jbrmvnuqjw1" path="res://scenes/plantslikemusic.mp3" id="7_0miny"]
 [ext_resource type="PackedScene" uid="uid://joxesecy4nhb" path="res://scenes/strawberry_seeds.tscn" id="7_0th8x"]
 [ext_resource type="PackedScene" uid="uid://cx4x56sumhq8q" path="res://scenes/lettuce_seeds.tscn" id="8_3fllv"]
+[ext_resource type="AudioStream" uid="uid://d3jbrmvnuqjw1" path="res://assets/plantslikemusic.mp3" id="9_o7k1y"]
 
 [node name="main" type="Node2D"]
 
@@ -36,10 +36,31 @@ position = Vector2(41, 55)
 texture = ExtResource("5_xmknb")
 
 [node name="growing_zone" parent="." instance=ExtResource("5_87wal")]
-position = Vector2(107, 22)
+position = Vector2(109, 22)
 
 [node name="growing_zone2" parent="." instance=ExtResource("5_87wal")]
 position = Vector2(79, 22)
+
+[node name="growing_zone5" parent="." instance=ExtResource("5_87wal")]
+position = Vector2(137, 22)
+
+[node name="growing_zone6" parent="." instance=ExtResource("5_87wal")]
+position = Vector2(137, 44)
+
+[node name="growing_zone9" parent="." instance=ExtResource("5_87wal")]
+position = Vector2(137, 65)
+
+[node name="growing_zone3" parent="." instance=ExtResource("5_87wal")]
+position = Vector2(79, 44)
+
+[node name="growing_zone7" parent="." instance=ExtResource("5_87wal")]
+position = Vector2(79, 65)
+
+[node name="growing_zone4" parent="." instance=ExtResource("5_87wal")]
+position = Vector2(109, 44)
+
+[node name="growing_zone8" parent="." instance=ExtResource("5_87wal")]
+position = Vector2(109, 65)
 
 [node name="pumpkin_seeds" parent="." instance=ExtResource("6_dfqtw")]
 position = Vector2(18, 17)
@@ -51,11 +72,18 @@ position = Vector2(41, 17)
 position = Vector2(18, 36)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_0miny")
-volume_db = -28.665
+stream = ExtResource("9_o7k1y")
+volume_db = -27.728
 autoplay = true
 
 [connection signal="input_event" from="growing_zone" to="growing_zone" method="_on_input_event"]
 [connection signal="input_event" from="growing_zone2" to="growing_zone2" method="_on_input_event"]
+[connection signal="input_event" from="growing_zone5" to="growing_zone5" method="_on_input_event"]
+[connection signal="input_event" from="growing_zone6" to="growing_zone6" method="_on_input_event"]
+[connection signal="input_event" from="growing_zone9" to="growing_zone9" method="_on_input_event"]
+[connection signal="input_event" from="growing_zone3" to="growing_zone3" method="_on_input_event"]
+[connection signal="input_event" from="growing_zone7" to="growing_zone7" method="_on_input_event"]
+[connection signal="input_event" from="growing_zone4" to="growing_zone4" method="_on_input_event"]
+[connection signal="input_event" from="growing_zone8" to="growing_zone8" method="_on_input_event"]
 [connection signal="input_event" from="strawberry_seeds" to="strawberry_seeds" method="_on_input_event"]
 [connection signal="input_event" from="lettuce_seeds" to="lettuce_seeds" method="_on_input_event"]
