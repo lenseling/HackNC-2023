@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cx4x56sumhq8q"]
+[gd_scene load_steps=4 format=3 uid="uid://clxri77qu1xh7"]
 
 [ext_resource type="Script" path="res://scripts/lettuce_seeds.gd" id="1_a60lm"]
 [ext_resource type="Texture2D" uid="uid://dsjur3mwnrgjt" path="res://assets/seeds/lettuce-seeds.png" id="2_bkbuu"]

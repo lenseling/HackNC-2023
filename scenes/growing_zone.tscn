@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bmodcvr0tiy7a"]
+[gd_scene load_steps=12 format=3 uid="uid://dh1oc3tig2mlr"]
 
 [ext_resource type="Script" path="res://scripts/growing_zone.gd" id="1_vbtih"]
 [ext_resource type="Texture2D" uid="uid://2nitn2by06j8" path="res://assets/crops/dirt.png" id="2_s31vo"]

@@ -28,10 +28,13 @@ func _on_growtimer_timeout():
 	if plantAnim.animation == "planted":
 		if plant == 1:
 			plantAnim.play("pumpkingrowing")
+			Global.money += 3
 		elif plant == 2:
 			plantAnim.play("strawberrygrowing")
+			Global.money += 2
 		elif plant == 3:
 			plantAnim.play("lettucegrowing")
+			Global.money +=1
 		$growtimer.start()
 	elif plantAnim.frame == 0:
 		plantAnim.frame = 1
