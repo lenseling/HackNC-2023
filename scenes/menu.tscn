@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://0k2i4v3rynxv"]
+
+[ext_resource type="Texture2D" uid="uid://2qvoqbfg1igj" path="res://assets/[4] Green/[1] Normal.png" id="1_q1q32"]
+
+[node name="menu" type="Node2D"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 404.0
+offset_top = 266.0
+offset_right = 751.0
+offset_bottom = 755.0
+theme_override_constants/separation = 25
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer"]
+custom_minimum_size = Vector2(320, 100)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/TextureButton"]
+layout_mode = 0
+offset_right = 346.0
+offset_bottom = 101.0
+texture = ExtResource("1_q1q32")
+
+[node name="Label" type="Label" parent="VBoxContainer/TextureButton"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="TextureButton2" type="TextureButton" parent="VBoxContainer"]
+custom_minimum_size = Vector2(320, 100)
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="VBoxContainer/TextureButton2"]
+offset_right = 346.0
+offset_bottom = 101.0
+texture = ExtResource("1_q1q32")
+
+[node name="TextureButton3" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="VBoxContainer/TextureButton3"]
+offset_right = 346.0
+offset_bottom = 101.0
+texture = ExtResource("1_q1q32")
