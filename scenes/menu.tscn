@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://0k2i4v3rynxv"]
+[gd_scene load_steps=5 format=3 uid="uid://0k2i4v3rynxv"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_favvy"]
 [ext_resource type="Texture2D" uid="uid://2qvoqbfg1igj" path="res://assets/[4] Green/[1] Normal.png" id="1_q1q32"]
 [ext_resource type="FontFile" uid="uid://eou77t2to7h" path="res://assets/Early GameBoy.ttf" id="2_nftwj"]
+[ext_resource type="AudioStream" uid="uid://c16ieno11q7sa" path="res://assets/plantslikemusic.mp3" id="4_ygxcy"]
 
 [node name="menu" type="Control"]
 layout_mode = 3
@@ -157,6 +158,7 @@ mouse_filter = 2
 color = Color(0.356863, 0.588235, 0.776471, 1)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ygxcy")
 volume_db = -26.791
 autoplay = true
 
