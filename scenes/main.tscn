@@ -3,12 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://cxny3g4dvr17h" path="res://scenes/plantShelf.tscn" id="1_qvtw1"]
 [ext_resource type="PackedScene" uid="uid://6k30tnb7putq" path="res://scenes/shop.tscn" id="2_o3ba3"]
 [ext_resource type="PackedScene" uid="uid://qkbkmj8ny1nd" path="res://scenes/wateringCan.tscn" id="4_l4ggy"]
-[ext_resource type="PackedScene" uid="uid://bmodcvr0tiy7a" path="res://scenes/growing_zone.tscn" id="5_87wal"]
+[ext_resource type="PackedScene" path="res://scenes/growing_zone.tscn" id="5_87wal"]
 [ext_resource type="Texture2D" uid="uid://bvjyayn77e830" path="res://assets/tools/pesticide.png" id="5_xmknb"]
-[ext_resource type="PackedScene" uid="uid://didq8obcioeta" path="res://scenes/pumpkin_seeds.tscn" id="6_dfqtw"]
-[ext_resource type="PackedScene" uid="uid://joxesecy4nhb" path="res://scenes/strawberry_seeds.tscn" id="7_0th8x"]
-[ext_resource type="PackedScene" uid="uid://cx4x56sumhq8q" path="res://scenes/lettuce_seeds.tscn" id="8_3fllv"]
-[ext_resource type="AudioStream" uid="uid://d3jbrmvnuqjw1" path="res://assets/plantslikemusic.mp3" id="9_o7k1y"]
+[ext_resource type="PackedScene" path="res://scenes/pumpkin_seeds.tscn" id="6_dfqtw"]
+[ext_resource type="PackedScene" path="res://scenes/strawberry_seeds.tscn" id="7_0th8x"]
+[ext_resource type="PackedScene" path="res://scenes/lettuce_seeds.tscn" id="8_3fllv"]
+[ext_resource type="AudioStream" path="res://scenes/plantslikemusic.mp3" id="9_o7k1y"]
 
 [node name="main" type="Node2D"]
 
