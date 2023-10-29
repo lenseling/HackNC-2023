@@ -1,7 +1,7 @@
 extends Node
 
 
-var plantSelected = 1
+var plantSelected = 0
 var money = 20
 var total_money = 21
 # just the total money earned in the game disregarding costs

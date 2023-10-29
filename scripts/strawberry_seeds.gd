@@ -12,8 +12,9 @@ func _input(event):
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.pressed:
 				# When the left mouse button is pressed, enable following the mouse.
-				selected = true
-				follow_mouse()
+				if Global.plantSelected == 2:
+					selected = true
+					follow_mouse()
 			else:
 				# When the left mouse button is released, stop following the mouse.
 				selected = false
@@ -29,3 +30,23 @@ func return_to_original_position():
 
 func _physics_process(delta):
 	follow_mouse()
+
+
+func _on_area_2d_mouse_entered():
+	Global.plantSelected = 2
+
+func _on_area_2d_mouse_exited():
+	Global.plantSelected = 0
+
+func _on_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			var mouse_pos = get_global_mouse_position()
+			if event.pressed & Global.plantSelected == 2:
+				# When the left mouse button is pressed, enable following the mouse.
+				selected = true
+				follow_mouse()
+			else:
+				# When the left mouse button is released, stop following the mouse.
+				selected = false
+				return_to_original_position()

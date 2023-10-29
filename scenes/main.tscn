@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bceb3ta2vfb7a"]
+[gd_scene load_steps=10 format=3 uid="uid://bceb3ta2vfb7a"]
 
 [ext_resource type="PackedScene" uid="uid://cxny3g4dvr17h" path="res://scenes/plantShelf.tscn" id="1_qvtw1"]
 [ext_resource type="PackedScene" uid="uid://6k30tnb7putq" path="res://scenes/shop.tscn" id="2_o3ba3"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://bvjyayn77e830" path="res://assets/tools/pesticide.png" id="5_xmknb"]
 [ext_resource type="PackedScene" uid="uid://didq8obcioeta" path="res://scenes/pumpkin_seeds.tscn" id="6_dfqtw"]
 [ext_resource type="AudioStream" uid="uid://d3jbrmvnuqjw1" path="res://scenes/plantslikemusic.mp3" id="7_0miny"]
+[ext_resource type="PackedScene" uid="uid://joxesecy4nhb" path="res://scenes/strawberry_seeds.tscn" id="7_0th8x"]
+[ext_resource type="PackedScene" uid="uid://cx4x56sumhq8q" path="res://scenes/lettuce_seeds.tscn" id="8_3fllv"]
 
 [node name="main" type="Node2D"]
 
@@ -42,6 +44,12 @@ position = Vector2(79, 22)
 [node name="pumpkin_seeds" parent="." instance=ExtResource("6_dfqtw")]
 position = Vector2(18, 17)
 
+[node name="strawberry_seeds" parent="." instance=ExtResource("7_0th8x")]
+position = Vector2(41, 17)
+
+[node name="lettuce_seeds" parent="." instance=ExtResource("8_3fllv")]
+position = Vector2(18, 36)
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_0miny")
 volume_db = -28.665
@@ -49,3 +57,5 @@ autoplay = true
 
 [connection signal="input_event" from="growing_zone" to="growing_zone" method="_on_input_event"]
 [connection signal="input_event" from="growing_zone2" to="growing_zone2" method="_on_input_event"]
+[connection signal="input_event" from="strawberry_seeds" to="strawberry_seeds" method="_on_input_event"]
+[connection signal="input_event" from="lettuce_seeds" to="lettuce_seeds" method="_on_input_event"]
