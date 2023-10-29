@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_favvy"]
 [ext_resource type="Texture2D" uid="uid://2qvoqbfg1igj" path="res://assets/[4] Green/[1] Normal.png" id="1_q1q32"]
 [ext_resource type="FontFile" uid="uid://eou77t2to7h" path="res://assets/Early GameBoy.ttf" id="2_nftwj"]
-[ext_resource type="AudioStream" uid="uid://d3jbrmvnuqjw1" path="res://assets/plantslikemusic.mp3" id="4_721mc"]
+[ext_resource type="AudioStream" path="res://scenes/plantslikemusic.mp3" id="4_721mc"]
 
 [node name="menu" type="Control"]
 layout_mode = 3

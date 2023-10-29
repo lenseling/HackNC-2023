@@ -2,6 +2,7 @@ extends Node
 
 
 var plantSelected = 0
+var waterSelected = 0
 var num_pumpkin = 0
 var num_strawberry = 0
 var num_lettuce = 0
