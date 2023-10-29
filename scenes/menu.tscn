@@ -4,7 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://2qvoqbfg1igj" path="res://assets/[4] Green/[1] Normal.png" id="1_q1q32"]
 [ext_resource type="FontFile" uid="uid://eou77t2to7h" path="res://assets/Early GameBoy.ttf" id="2_nftwj"]
 
-[node name="menu" type="Node2D"]
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_favvy")
 
 [node name="Title" type="Label" parent="."]
@@ -88,6 +90,7 @@ text = "Quit
 
 [node name="Popup" type="CanvasLayer" parent="."]
 visible = false
+follow_viewport_enabled = true
 
 [node name="Control" type="Control" parent="Popup"]
 layout_mode = 3
@@ -139,6 +142,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 326)
+zoom = Vector2(0.14, 0.14)
+
 [connection signal="pressed" from="VBoxContainer/start_button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/guide_button" to="." method="_on_guide_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/quit_button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Popup/Control/Panel/VBoxContainer/X" to="." method="_on_x_pressed"]
