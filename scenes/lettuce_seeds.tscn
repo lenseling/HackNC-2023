@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cx4x56sumhq8q"]
+
+[ext_resource type="Script" path="res://lettuce_seeds.gd" id="1_a60lm"]
+[ext_resource type="Texture2D" uid="uid://ndxcmipm2yd3" path="res://assets/seeds/pumpkin-seeds.png" id="2_5hs5i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4gwj4"]
+size = Vector2(10, 12)
+
+[node name="lettuce_seeds" type="StaticBody2D"]
+script = ExtResource("1_a60lm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_5hs5i")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_4gwj4")

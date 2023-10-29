@@ -1,0 +1,86 @@
+[gd_scene load_steps=12 format=3 uid="uid://bmodcvr0tiy7a"]
+
+[ext_resource type="Script" path="res://scripts/growing_zone.gd" id="1_vbtih"]
+[ext_resource type="Texture2D" uid="uid://bkg03yi4s7yxm" path="res://assets/crops/dirt.png" id="2_s31vo"]
+[ext_resource type="Texture2D" uid="uid://s8fjih6hfyxn" path="res://assets/crops/growing-lettuce.png" id="3_isima"]
+[ext_resource type="Texture2D" uid="uid://bje15ix1y8t26" path="res://assets/crops/ready-lettuce.png" id="4_l2hef"]
+[ext_resource type="Texture2D" uid="uid://c21xkcjalgo8l" path="res://assets/crops/dirt-planted.png" id="5_oum4l"]
+[ext_resource type="Texture2D" uid="uid://bdymg0l5dql8d" path="res://assets/crops/growing-pumpkin.png" id="6_gwj5j"]
+[ext_resource type="Texture2D" uid="uid://co8xcbtphqcdo" path="res://assets/crops/ready-pumpkin.png" id="7_tke7k"]
+[ext_resource type="Texture2D" uid="uid://ctslb70146cqy" path="res://assets/crops/growing-strawberry.png" id="8_4t8uo"]
+[ext_resource type="Texture2D" uid="uid://8flwrgawsp71" path="res://assets/crops/ready-strawberry.png" id="9_nv0sr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i2h1i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_s31vo")
+}],
+"loop": false,
+"name": &"default",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_isima")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_l2hef")
+}],
+"loop": false,
+"name": &"lettucegrowing",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_oum4l")
+}],
+"loop": true,
+"name": &"planted",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_gwj5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_tke7k")
+}],
+"loop": false,
+"name": &"pumpkingrowing",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_4t8uo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_nv0sr")
+}],
+"loop": false,
+"name": &"strawberrygrowing",
+"speed": 0.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yhi4i"]
+size = Vector2(4, 4.5)
+
+[node name="growing_zone" type="StaticBody2D"]
+script = ExtResource("1_vbtih")
+
+[node name="plantAnim" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_i2h1i")
+animation = &"strawberrygrowing"
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 1.25)
+shape = SubResource("RectangleShape2D_yhi4i")
+
+[node name="growtimer" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="growtimer" to="." method="_on_growtimer_timeout"]
