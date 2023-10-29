@@ -18,6 +18,7 @@ func _input(event):
 			else:
 				# When the left mouse button is released, stop following the mouse.
 				selected = false
+				Global.plantSelected = 0
 				return_to_original_position()
 
 func follow_mouse():
@@ -42,11 +43,10 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 			else:
 				# When the left mouse button is released, stop following the mouse.
 				selected = false
+				Global.plantSelected = 0
 				return_to_original_position()
 
 
 func _on_area_2d_mouse_entered():
 	Global.plantSelected = 1
 
-func _on_area_2d_mouse_exited():
-	Global.plantSelected = 0
