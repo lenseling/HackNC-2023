@@ -1,44 +1,154 @@
-[gd_scene load_steps=2 format=3 uid="uid://0k2i4v3rynxv"]
+[gd_scene load_steps=4 format=3 uid="uid://0k2i4v3rynxv"]
 
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_favvy"]
 [ext_resource type="Texture2D" uid="uid://2qvoqbfg1igj" path="res://assets/[4] Green/[1] Normal.png" id="1_q1q32"]
+[ext_resource type="FontFile" uid="uid://eou77t2to7h" path="res://assets/Early GameBoy.ttf" id="2_nftwj"]
 
-[node name="menu" type="Node2D"]
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_favvy")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 50.0
+offset_right = 1063.0
+offset_bottom = 209.0
+theme_override_fonts/font = ExtResource("2_nftwj")
+theme_override_font_sizes/font_size = 92
+text = "Sky Sprouts"
+vertical_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
 offset_left = 404.0
 offset_top = 266.0
 offset_right = 751.0
 offset_bottom = 755.0
 theme_override_constants/separation = 25
 
-[node name="TextureButton" type="TextureButton" parent="VBoxContainer"]
+[node name="start_button" type="TextureButton" parent="VBoxContainer"]
 custom_minimum_size = Vector2(320, 100)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/TextureButton"]
+[node name="start" type="TextureRect" parent="VBoxContainer/start_button"]
 layout_mode = 0
 offset_right = 346.0
 offset_bottom = 101.0
 texture = ExtResource("1_q1q32")
 
-[node name="Label" type="Label" parent="VBoxContainer/TextureButton"]
+[node name="Label" type="Label" parent="VBoxContainer/start_button"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 47.0
+offset_top = 6.0
+offset_right = 327.0
+offset_bottom = 79.0
+theme_override_fonts/font = ExtResource("2_nftwj")
+theme_override_font_sizes/font_size = 56
+text = "Start"
+horizontal_alignment = 1
 
-[node name="TextureButton2" type="TextureButton" parent="VBoxContainer"]
+[node name="guide_button" type="TextureButton" parent="VBoxContainer"]
 custom_minimum_size = Vector2(320, 100)
 layout_mode = 2
 
-[node name="TextureRect2" type="TextureRect" parent="VBoxContainer/TextureButton2"]
+[node name="guide" type="TextureRect" parent="VBoxContainer/guide_button"]
+layout_mode = 0
 offset_right = 346.0
 offset_bottom = 101.0
 texture = ExtResource("1_q1q32")
 
-[node name="TextureButton3" type="TextureButton" parent="VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/guide_button"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 5.0
+offset_right = 324.0
+offset_bottom = 78.0
+theme_override_fonts/font = ExtResource("2_nftwj")
+theme_override_font_sizes/font_size = 56
+text = "Guide"
+
+[node name="quit_button" type="TextureButton" parent="VBoxContainer"]
+custom_minimum_size = Vector2(320, 100)
 layout_mode = 2
 
-[node name="TextureRect2" type="TextureRect" parent="VBoxContainer/TextureButton3"]
+[node name="quit" type="TextureRect" parent="VBoxContainer/quit_button"]
+layout_mode = 0
 offset_right = 346.0
 offset_bottom = 101.0
 texture = ExtResource("1_q1q32")
+
+[node name="Label" type="Label" parent="VBoxContainer/quit_button"]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 3.0
+offset_right = 295.0
+offset_bottom = 76.0
+theme_override_fonts/font = ExtResource("2_nftwj")
+theme_override_font_sizes/font_size = 56
+text = "Quit
+"
+
+[node name="Popup" type="CanvasLayer" parent="."]
+visible = false
+follow_viewport_enabled = true
+
+[node name="Control" type="Control" parent="Popup"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 786.0
+offset_top = 290.0
+offset_right = 1117.0
+offset_bottom = 561.0
+
+[node name="Panel" type="Panel" parent="Popup/Control"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 0
+offset_left = -5.0
+offset_top = 74.0
+offset_right = 333.0
+offset_bottom = 235.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Popup/Control/Panel"]
+layout_direction = 3
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 58.0
+
+[node name="X" type="Button" parent="Popup/Control/Panel/VBoxContainer"]
+layout_mode = 2
+text = "X"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Popup/Control/Panel"]
+layout_mode = 2
+offset_top = 35.0
+offset_right = 338.0
+offset_bottom = 146.0
+
+[node name="obejective" type="Label" parent="Popup/Control/Panel/VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_nftwj")
+theme_override_font_sizes/font_size = 28
+text = "Objectives
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Popup/Control/Panel/VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_nftwj")
+theme_override_font_sizes/font_size = 15
+text = "Grow crops, make a profit, promote sustainability. "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 326)
+zoom = Vector2(0.14, 0.14)
+
+[connection signal="pressed" from="VBoxContainer/start_button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/guide_button" to="." method="_on_guide_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit_button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Popup/Control/Panel/VBoxContainer/X" to="." method="_on_x_pressed"]
