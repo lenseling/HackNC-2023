@@ -16,9 +16,10 @@ func _physics_process(delta):
 
 func _on_Area2D_area_entered(area):
 	if !plantgrowing:
-		plantgrowing = true
-		$growtimer.start()
-		$plantAnim.play("planted")
+		if Global.waterSelected == 0:
+			plantgrowing = true
+			$growtimer.start()
+			$plantAnim.play("planted")
 	else:
 		print("Plant is already growing here.")
 
@@ -38,8 +39,9 @@ func _on_growtimer_timeout():
 
 func _on_area_2d_area_entered(area):
 	if !plantgrowing:
-		plantgrowing = true
-		$growtimer.start()
-		$plantAnim.play("planted")
+		if Global.waterSelected == 0:
+			plantgrowing = true
+			$growtimer.start()
+			$plantAnim.play("planted")
 	else:
 		print("Plant is already growing here.")
