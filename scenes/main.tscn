@@ -1,0 +1,83 @@
+[gd_scene load_steps=9 format=3 uid="uid://bceb3ta2vfb7a"]
+
+[ext_resource type="PackedScene" uid="uid://cxny3g4dvr17h" path="res://scenes/plantShelf.tscn" id="1_qvtw1"]
+[ext_resource type="PackedScene" uid="uid://6k30tnb7putq" path="res://scenes/shop.tscn" id="2_o3ba3"]
+[ext_resource type="Texture2D" uid="uid://bkg03yi4s7yxm" path="res://assets/crops/dirt.png" id="3_08a1l"]
+[ext_resource type="PackedScene" uid="uid://qkbkmj8ny1nd" path="res://scenes/wateringCan.tscn" id="4_l4ggy"]
+[ext_resource type="Texture2D" uid="uid://bvjyayn77e830" path="res://assets/tools/pesticide.png" id="5_xmknb"]
+[ext_resource type="Texture2D" uid="uid://dsjur3mwnrgjt" path="res://assets/seeds/lettuce-seeds.png" id="6_5d3wd"]
+[ext_resource type="Texture2D" uid="uid://ndxcmipm2yd3" path="res://assets/seeds/pumpkin-seeds.png" id="7_g2f0e"]
+[ext_resource type="Texture2D" uid="uid://dt16qmqafrij2" path="res://assets/seeds/strawberry-seeds.png" id="8_5cyq4"]
+
+[node name="main" type="Node2D"]
+
+[node name="PlantShelf" parent="." instance=ExtResource("1_qvtw1")]
+position = Vector2(108, 36)
+scale = Vector2(0.675, 0.675)
+
+[node name="Shop" parent="." instance=ExtResource("2_o3ba3")]
+position = Vector2(30.25, 34.75)
+scale = Vector2(0.69375, 0.75625)
+
+[node name="Plant" type="Sprite2D" parent="."]
+position = Vector2(80, 22)
+texture = ExtResource("3_08a1l")
+
+[node name="Plant2" type="Sprite2D" parent="."]
+position = Vector2(106, 22)
+texture = ExtResource("3_08a1l")
+
+[node name="Plant3" type="Sprite2D" parent="."]
+position = Vector2(133, 22)
+texture = ExtResource("3_08a1l")
+
+[node name="Plant4" type="Sprite2D" parent="."]
+position = Vector2(80, 44)
+texture = ExtResource("3_08a1l")
+
+[node name="Plant5" type="Sprite2D" parent="."]
+position = Vector2(106, 44)
+texture = ExtResource("3_08a1l")
+
+[node name="Plant6" type="Sprite2D" parent="."]
+position = Vector2(133, 44)
+texture = ExtResource("3_08a1l")
+
+[node name="Plant7" type="Sprite2D" parent="."]
+position = Vector2(80, 65)
+texture = ExtResource("3_08a1l")
+
+[node name="Plant8" type="Sprite2D" parent="."]
+position = Vector2(106, 65)
+texture = ExtResource("3_08a1l")
+
+[node name="Plant9" type="Sprite2D" parent="."]
+position = Vector2(133, 65)
+texture = ExtResource("3_08a1l")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+custom_minimum_size = Vector2(160, 90)
+offset_right = 160.0
+offset_bottom = 90.0
+color = Color(0.356863, 0.588235, 0.776471, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="WateringCan" parent="." instance=ExtResource("4_l4ggy")]
+position = Vector2(20, 55)
+
+[node name="Pesticide" parent="." instance=ExtResource("4_l4ggy")]
+position = Vector2(41, 55)
+texture = ExtResource("5_xmknb")
+
+[node name="LettuceSeeds" type="Sprite2D" parent="."]
+position = Vector2(18, 17)
+texture = ExtResource("6_5d3wd")
+
+[node name="PumpkinSeeds" type="Sprite2D" parent="."]
+position = Vector2(40, 17)
+texture = ExtResource("7_g2f0e")
+
+[node name="StrawberrySeeds" type="Sprite2D" parent="."]
+position = Vector2(18, 36)
+texture = ExtResource("8_5cyq4")
