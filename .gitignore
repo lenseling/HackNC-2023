@@ -1,9 +1,0 @@
-# Ignore node_modules directory (dependencies)
-node_modules/
-
-# Ignore any files or directories generated during development or build
-dist/
-build/
-
-# Ignore environment-specific files
-.env
