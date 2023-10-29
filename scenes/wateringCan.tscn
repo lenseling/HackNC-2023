@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://qkbkmj8ny1nd"]
 
-[ext_resource type="Texture2D" uid="uid://cbh1aqx54wtil" path="res://assets/tools/watering-can.png" id="1_qjnad"]
+[ext_resource type="Texture2D" uid="uid://i2faffbsaegm" path="res://assets/tools/watering-can.png" id="1_qjnad"]
 
 [node name="Sprite2D" type="Sprite2D"]
 texture = ExtResource("1_qjnad")

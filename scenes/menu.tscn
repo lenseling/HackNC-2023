@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://0k2i4v3rynxv"]
+[gd_scene load_steps=5 format=3 uid="uid://0k2i4v3rynxv"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_favvy"]
 [ext_resource type="Texture2D" uid="uid://2qvoqbfg1igj" path="res://assets/[4] Green/[1] Normal.png" id="1_q1q32"]
 [ext_resource type="FontFile" uid="uid://eou77t2to7h" path="res://assets/Early GameBoy.ttf" id="2_nftwj"]
+[ext_resource type="AudioStream" uid="uid://d3jbrmvnuqjw1" path="res://scenes/plantslikemusic.mp3" id="4_ge64a"]
 
 [node name="menu" type="Control"]
 layout_mode = 3
@@ -147,6 +148,19 @@ autowrap_mode = 2
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 326)
 zoom = Vector2(0.14, 0.14)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_right = 1216.0
+offset_bottom = 695.0
+mouse_filter = 2
+color = Color(0.356863, 0.588235, 0.776471, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ge64a")
+volume_db = -28.665
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/start_button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/guide_button" to="." method="_on_guide_button_pressed"]
