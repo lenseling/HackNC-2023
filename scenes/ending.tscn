@@ -9,11 +9,11 @@ script = ExtResource("1_5xe7l")
 
 [node name="TextureButton" type="TextureButton" parent="."]
 custom_minimum_size = Vector2(100, 100)
-offset_left = 310.0
-offset_top = 147.0
-offset_right = 809.0
-offset_bottom = 259.0
-scale = Vector2(0.999054, 1)
+offset_left = 48.0
+offset_top = 25.0
+offset_right = 547.0
+offset_bottom = 125.0
+scale = Vector2(0.129549, 0.13942)
 
 [node name="TextureRect" type="TextureRect" parent="TextureButton"]
 layout_mode = 0
@@ -34,10 +34,11 @@ theme_override_font_sizes/font_size = 35
 text = "Return to Menu"
 
 [node name="Label" type="Label" parent="."]
-offset_left = 450.0
-offset_top = 404.0
-offset_right = 690.0
-offset_bottom = 473.0
+offset_left = 48.0
+offset_top = 56.0
+offset_right = 288.0
+offset_bottom = 125.0
+scale = Vector2(0.276552, 0.323404)
 theme_override_fonts/font = ExtResource("3_eis7v")
 text = "Profit:
 Total earned:
